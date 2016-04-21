@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <!--  <link rel="stylesheet" type="text/css" href="css/index.css">-->
+        <link href="./css/bootstrap.min.css" rel="stylesheet">
+        <title>Hello World</title>
+      </head>
+      <body>
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="./index.html">JuanApp</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="./profile.html">Profile</a></li>
+              </ul>
+
+            </div>
+          </div>
+        </nav>
+
+        <div class="container-fluid" style="padding-top:30px">
+          <div class="row" style="padding-top:30px">
+
+            <div class="col-md-4 col-ms-4  col-xs-4">
+              <div class="row">
+
+                <div class="col-md-12 col-ms-12  col-xs-12">
+                  <img src="./img/profile/profile.png" id="profilePhoto" class="img-responsive" />
+                </div>
+                <div class="col-md-12 col-ms-12  col-xs-12">
+                 <button id="cambiarFoto"   class="btn btn-primary">Cambiar</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-ms-6  col-xs-6">
+                  <div class="row">
+                        <div class="col-md-6 col-ms-6  col-xs-6">
+
+                            <label for="nameProfile">Nombre: </label>
+                        </div>
+                        <div class="col-md-6 col-ms-6  col-xs-6">
+
+                            <p  id="nameProfile" class="form-control-static" value="" >-</p>
+                        </div>
+                  </div>
+                  <div class="row">
+                              <div class="col-md-6 col-ms-6  col-xs-6">
+
+                                  <label for="puestoProfile">Puesto: </label>
+                              </div>
+                              <div class="col-md-6 col-ms-6  col-xs-6">
+
+                                  <p  id="puestoProfile" class="form-control-static" value="" >-</p>
+                              </div>
+                  </div>
+                  <div class="row">
+                              <div class="col-md-6 col-ms-6  col-xs-6">
+
+                                  <label for="telefono">Telefono: </label>
+                              </div>
+                              <div class="col-md-6 col-ms-6  col-xs-6">
+
+                                  <p  id="telefono" class="form-control-static" value="" >-</p>
+                              </div>
+                  </div>
+                  <div class="row">
+
+                     <button id="cambiarInformacion" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Cambiar información</button>
+
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <div id="myModal" class="modal fade" role="dialog">
+               <div class="modal-dialog">
+
+                 <!-- Modal content-->
+                 <div class="modal-content">
+                   <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                     <h4 class="modal-title">Ingresa datos</h4>
+                   </div>
+                   <div class="modal-body">
+                     <div class="row">
+                           <div class="col-md-6 col-ms-6  col-xs-6">
+
+                               <label for="nameProfileInput">Nombre: </label>
+                           </div>
+                           <div class="col-md-6 col-ms-6  col-xs-6">
+
+                               <input  id="nameProfileInput" class="form-control" value="" >-</p>
+                           </div>
+                     </div>
+                     <div class="row">
+                                 <div class="col-md-6 col-ms-6  col-xs-6">
+
+                                     <label for="puestoProfileInput">Puesto: </label>
+                                 </div>
+                                 <div class="col-md-6 col-ms-6  col-xs-6">
+
+                                     <input  id="puestoProfileInput" class="form-control" value="" >-</p>
+                                 </div>
+                     </div>
+                     <div class="row">
+                                 <div class="col-md-6 col-ms-6  col-xs-6">
+
+                                     <label for="telefonoInput">Telefono: </label>
+                                 </div>
+                                 <div class="col-md-6 col-ms-6  col-xs-6">
+
+                                     <input  id="telefonoInput" class="form-control" value="" >-</p>
+                                 </div>
+                     </div>
+                   </div>
+                   <div class="modal-footer">
+                     <button type="button" id="guardar" class="btn btn-default" data-dismiss="modal">Close</button>
+                   </div>
+                 </div>
+
+               </div>
+             </div>
+             -<script type="text/javascript" src="cordova.js"></script>
+    <!--    <script type="text/javascript" src="js/index.js"></script>-->
+    <script src="./js/jquery-1.12.3.min.js"></script>
+    <!--  <script type="text/javascript" src="./js/jquery-2.2.3.min.js"></script>-->
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script>
+    j$=jQuery.noConflict();
+    function refresca(){
+      if(localStorage.getItem('profilePhoto')!=''){
+
+        j$('#profilePhoto').attr('src',"data:image/jpeg;base64,"+localStorage.getItem('profilePhoto'));
+      }
+      if(localStorage.getItem('nameProfile')!=''){
+        j$('#nameProfile').text(localStorage.getItem('nameProfile'));
+      }
+      if(localStorage.getItem('puestoProfile')!=''){
+        j$('#puestoProfile').text(localStorage.getItem('puestoProfile'));
+      }
+      if(localStorage.getItem('telefono')!=''){
+
+          console.log('prueba');
+        j$('#telefono').text(localStorage.getItem('telefono'));
+      }
+    }
+    function guardar(){
+
+      console.log(localStorage.getItem('puestoProfile'));
+      localStorage.setItem('nameProfile',j$("#nameProfileInput").val());
+      localStorage.setItem('telefono',j$("#telefonoInput").val());
+      localStorage.setItem('puestoProfile',j$("#puestoProfileInput").val());
+      refresca();
+    }
+    function cambiarFoto(){
+      if (!navigator.camera) {
+           alert("Camera API not supported", "Error");
+           return;
+       }
+       var options =   {   quality: 50,
+                           destinationType: Camera.DestinationType.DATA_URL,
+                           saveToPhotoAlbum: true,
+                           sourceType: 1,      // 0:Photo Library, 1=Camera, 2=Saved Album
+                           encodingType: 0     // 0=JPG 1=PNG
+                       };
+
+       navigator.camera.getPicture(
+           function(imgData) {
+               j$('#profilePhoto').attr('src', "data:image/jpeg;base64,"+imgData);
+               localStorage.setItem('profilePhoto',''+imgData);
+
+           },
+           function() {
+               alert('Error taking picture', 'Error');
+           },
+           options);
+
+    }
+    j$("#cambiarFoto").on('click',cambiarFoto);
+    j$(document).ready(function() {
+      refresca();
+      j$("#guardar").on('click',function(){
+        guardar();
+      });
+    });
+    </script>
+    </body>
+</html>

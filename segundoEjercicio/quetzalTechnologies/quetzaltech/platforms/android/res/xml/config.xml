@@ -8,10 +8,10 @@
     <allow-intent href="market:*" />
     <name>quetzaltech</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Mi pagina web encapsulada!
     </description>
     <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+        CIDWA TEAM
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -21,4 +21,5 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <icon src="www/img/quetzalLogo.png" />
 </widget>

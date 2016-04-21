@@ -9,7 +9,14 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "mx.unam.acatlan.flisolApp"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "mx.unam.acatlan.flisolApp"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "mx.unam.acatlan.flisolApp"
+        }
+    }
 }
